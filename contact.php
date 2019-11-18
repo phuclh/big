@@ -2,26 +2,25 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
-     <title>Phuc Le - Web Developer Examples and Resources</title>
+     <title>Phuc Le - Web Developer Examples and Resourcesx</title>
   <meta charset="utf-8" />
   <meta name="robots" content="noindex,nofollow" />
   <meta name="viewport" content="width=device-width" />
   <link rel="stylesheet" href="css/big.css" />
   <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/forms.css" />
   <!-- jQuery -->
-  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
   <!-- MenuMaker plugin -->
-  <script src="https://s3.amazonaws.com/menumaker/menumaker.min.js"></script>
+  <script src="https://s3.amazonaws.com/menumaker/menumaker.min.js" type="text/javascript"></script>
   <!-- Icon library -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
  <script src="js/script.js"></script>
  </head>
  <body>
-
-     
-   <main>
+     <main>
      <header>
-        <h1><a href="index.html">Phuc Le - Web Developer Examples and Resources</a></h1>
+        <h1><a href="index.html">Web Developer Examples and Resources by Kristal Dow</a></h1>
         <nav id="cssmenu">
           <ul>
              <li><a href="../index.html"><i class="fa fa-fw fa-institution"></i> WEB110</a></li>
@@ -48,30 +47,50 @@
      </header>
        
        <!-- START LEFT COLUMN -->
-       <section>
-            <h2 class="subheader">Search Engine Optimization (SEO) - Responsive Youtube Video</h2>
-           <div class='embed-container'>
-               <iframe src='https://www.youtube.com/embed/hF515-0Tduk' frameborder='0' allowfullscreen>
-               </iframe>
-           </div>
-       </section>
-       <!-- END LEFT COLUMN -->
+       <section class="fullWidth">
+            <div class="indent">
+       
+       <?php
+          /*
+           * Below are 2 different forms to be re-used       
+           * 
+           * Only use one at a time, comment out the other!       
+           *
+           */
 
-       <!-- START RIGHT COLUMN -->
-       <aside>
-        <h3>Additional SEO Resources</h3>
-        <ul id="fav-list">
-            <li><a href="https://ahrefs.com/blog/" target="_blank">Ahrefs</a></li>
-            <li><a href="https://backlinko.com/" target="_blank">Backlinko</a></li>
-            <li><a href="https://www.searchenginejournal.com/" target="_blank">Search Engine Journal</a></li>
-        </ul>
-       </aside>
-       <!-- END RIGHT COLUMN -->
+          include 'includes/contact_include.php'; #site keys & code here
+      
+          $toAddress = "phuclh93@gmail.com";  //place your/your client's email address here
+          $toName = "Phuc Le"; //place your client's name here
+          $website = "Contact Form Test";  //place NAME of your client's website
+
+          echo loadContact('simple.php');#demonstrates a simple contact form
+          //echo loadContact('multiple.php');#demonstrates multiple form elements
+
+        ?>
+
+          </div>
+        </section>
+
+     <!-- END LEFT COLUMN -->
        
      <footer>
-      <p><small>&copy; 2019 by <a href="contact.php">Contact Phuc Le </a>, All Rights Reserved ~ <a href="http://validator.w3.org/check/referer" target="_blank">Valid HTML</a> ~ <a href="http://jigsaw.w3.org/css-validator/check?uri=referer" target="_blank">Valid CSS</a></small></p>
+      <p><small>&copy; 2019 by <a href="contact.php">Phuc Le </a>, All Rights Reserved ~ <a href="http://validator.w3.org/check/referer" target="_blank">Valid HTML</a> ~ <a href="http://jigsaw.w3.org/css-validator/check?uri=referer" target="_blank">Valid CSS</a></small></p>
     </footer>
   </main>
+     
+  <!-- Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon -->
+     
+  <script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }   
+  </script>
      
  </body>
 </html>
