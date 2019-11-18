@@ -1,0 +1,137 @@
+body {
+    background-color: #463537;
+}
+
+main {
+    background-color: #fff;
+    width: 80%;
+    overflow: auto;
+    border: none;
+    margin: auto;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+a {
+    color: #99B898;
+}
+
+ul#fav-list li a {
+    line-height: 30px;
+}
+
+h1 a {
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 1em;
+    color: #235f28;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+dt {
+    font-weight: bold;
+    color: lightcoral;
+}
+
+a:hover {
+        color: #594F4F;
+    }
+
+h2, h3 {
+    color: darkslategray;
+}
+
+/* Left Column */
+section {
+    float: left;
+    width: 65%;
+    box-sizing: border-box;
+    padding: 15px;
+}
+/* End Left Column */
+
+/* Right Column */
+aside {
+    float: right;
+    width: 34%;
+}
+/* End Right Column */
+
+.fullWidth {
+    width: 100%;
+}
+
+div.gallery {
+    text-align: center;
+}
+
+figure {
+    display: inline-block;
+    margin: 0;
+}
+
+/* Start Embed Resposively Styles */
+.embed-container { 
+    position: relative; 
+    padding-bottom: 56.25%; 
+    height: 0; 
+    overflow: hidden; 
+    max-width: 100%; 
+} 
+.embed-container iframe { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+}
+/* End Embed Resposively Styles */
+
+.embed-container.agenda-view {
+    display: none;
+}
+
+footer {
+    padding: 2em;
+    text-align: center;
+    clear: both;
+}
+
+/* Mobile Styles */
+
+@media all and (min-width:501px){
+    div.wrapper form{
+        margin-left:22.8px;
+
+    }
+}
+
+@media all and (max-width: 600px) {
+    
+    main {
+        width: 100%;
+    }
+    
+    section {
+        float: none;
+        width: 100%;
+    }
+
+    aside {
+        float: none;
+        width: 100%;
+    }
+    
+}
+
+@media all and (max-width:860px){
+    /*Show Agenda View Calendar */
+    div.embed-container.agenda-view {
+        display: block;
+    }
+    
+    /* Hide Month View Calendar */
+    div.embed-container.month-view {
+        display: none;
+    }
+}
+/* End Mobile Styles */
